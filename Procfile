@@ -1,0 +1,1 @@
+web: gunicorn drip_backend.wsgi
