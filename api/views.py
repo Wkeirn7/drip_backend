@@ -1,5 +1,4 @@
 from django.contrib.auth.models import User
-from django.http import JsonResponse
 from rest_framework import generics, status
 from .serializers import AssetSerializer, GraphSerializer
 from .models import Graph, Asset
@@ -48,14 +47,3 @@ class AssetRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
             return asset
         else:
             raise InvalidUserException(detail={"Failure": "Invalid User"}, status_code=status.HTTP_403_FORBIDDEN)
-
-
-
-
-
-
-
-
-
-
-
