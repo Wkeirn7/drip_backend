@@ -15,8 +15,8 @@ SECRET_KEY = 'django-insecure-yw7=(k)ql-27)&edu^-8gi#g$at62bvtw2se(s5gbg=zae$pd_
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CORS_ALLOW_ALL_ORIGINS: True
-CORS_REPLACE_HTTPS_REFERER: True
+# CORS_ALLOW_ALL_ORIGINS: True
+# CORS_REPLACE_HTTPS_REFERER: True
 
 # Application definition
 
@@ -32,7 +32,7 @@ INSTALLED_APPS = [
     'accounts',
     'rest_framework',
     'rest_framework.authtoken',
-    # 'corsheaders',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -43,7 +43,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'drip_backend.urls'
@@ -119,7 +119,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# ALLOWED_HOSTS=['*']
+ALLOWED_HOSTS=['*']
 # CORS_ORIGIN_ALLOW_ALL = True
 
 REST_FRAMEWORK = {
