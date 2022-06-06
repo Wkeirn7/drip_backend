@@ -6,6 +6,8 @@ class Graph(models.Model):
     graph_owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='graphs')
     graph_name = models.CharField(max_length=50)
     date_created = models.DateTimeField(auto_now_add=True)
+    reinvestment_period = models.CharField(max_length=50)
+    reinvestment_amount = models.DecimalField(max_digits=15, decimal_places=2)
     
     def __str__(self):
         return self.graph_name

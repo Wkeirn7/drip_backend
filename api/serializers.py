@@ -23,5 +23,7 @@ class GraphSerializer(serializers.ModelSerializer):
             'id',
             'graph_name',
             'date_created',
+            'reinvestment_period',
+            'reinvestment_amount',
             'assets',
         ]
